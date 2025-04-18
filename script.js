@@ -87,6 +87,10 @@ const buildCharacter = (char) => {
   const origin = document.createElement("h3");
   origin.textContent = `origin: ${characterWithMostEpisodes.origin.name}`;
 
+  if (characterWithMostEpisodes.origin.name === "unknown") {
+    origin.textContent = "origin: -";
+  }
+
   const img = document.createElement("img");
   img.src = characterWithMostEpisodes.image;
 
